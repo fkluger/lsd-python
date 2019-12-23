@@ -6,5 +6,5 @@ import numpy
 
 setup(
     cmdclass={'build_ext': build_ext},
-    ext_modules=[Extension("lsd", ["lsd.pyx", 'lsd_1.6/lsd.c'], include_dirs=[numpy.get_include()])]
+    ext_modules=[Extension("lsd", ["lsd.pyx", 'lsd_1.6/lsd.c'], include_dirs=[numpy.get_include()], extra_compile_args=['-g0']) ]
 )
